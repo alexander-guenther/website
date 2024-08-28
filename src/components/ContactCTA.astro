@@ -2,24 +2,25 @@
 import CallToAction from './CallToAction.astro';
 import Icon from './Icon.astro';
 ---
-
-<aside>
-	<h2>Interested in working together?</h2>
-	<CallToAction href="mailto:me@example.com">
-		Send Me a Message
+<aside class="">
+	<h2>Ihr Anliegen ist mir wichtig.</h2>
+	<CallToAction href="mailto:a.guenther@alexanderguenther.com">
+		Schreiben Sie mir gerne
 		<Icon icon="paper-plane-tilt" size="1.2em" />
 	</CallToAction>
 </aside>
 
+
 <style>
+
 	aside {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 3rem;
-		border-top: 1px solid var(--gray-800);
-		border-bottom: 1px solid var(--gray-800);
-		padding: 5rem 1.5rem;
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
 		background-color: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
 	}

@@ -5,22 +5,25 @@ const currentYear = new Date().getFullYear();
 
 <footer>
 	<div class="group">
-		<p>
-			Designed & Developed in Portland with <a href="https://astro.build/">Astro</a>
+		<a style="text-decoration: underline;" href="https://bento.me/hofstetter" target="_blank">
+		<p style="margin-right: 10px;">
+			Designt & Entwickelt von Sebastian Hofstetter
 			<Icon icon="rocket-launch" size="1.2em" />
 		</p>
-		<p>&copy; {currentYear} Jeanine White</p>
+	</a>
+		<p >&copy; {currentYear} Alexander Günther</p>
 	</div>
 	<p class="socials">
-		<a href="https://twitter.com/me"> Twitter</a>
-		<a href="https://github.com/me"> GitHub</a>
-		<a href="https://codepen.io/me"> CodePen</a>
+		<a href="/"> Home</a>
+		<a href="/kontakt"> Kontakt</a>
+		<a href="/impressum"> Impressum</a>
+		<a href="/datenschutz"> Datenschutz</a>
 	</p>
 </footer>
 <style>
 	footer {
 		display: flex;
-		flex-direction: column;
+		flex-direction: column-reverse;
 		gap: 3rem;
 		margin-top: auto;
 		padding: 3rem 2rem 3rem;
