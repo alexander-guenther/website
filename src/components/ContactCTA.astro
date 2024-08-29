@@ -2,17 +2,26 @@
 import CallToAction from './CallToAction.astro';
 import Icon from './Icon.astro';
 ---
-<aside class="">
-	<h2>Ihr Anliegen ist mir wichtig.</h2>
-	<CallToAction href="mailto:a.guenther@alexanderguenther.com">
-		Schreiben Sie mir gerne
-		<Icon icon="paper-plane-tilt" size="1.2em" />
-	</CallToAction>
+
+<aside>
+	<div id="contact"></div>
+	<div class="content-left">
+		<h2>Mein Kontakt</h2>
+		<div style="margin-top: 2rem;">
+			<div><Icon icon="phone" size="1.2em" /> Telefon: +49 (0) 36 43 / 85 25 63</div>
+		<div><Icon icon="device-mobile" size="1.2em" /> Mobil: +49 (0) 171 / 24 28 052</div>
+	<div><Icon icon="map-pin" size="1.2em" /> Adresse: <a href="https://maps.app.goo.gl/EtzzCjSz2NeWPKfS6" target="_blank">Rainer-Maria-Rilke-Straße 12, 99425 Weimar</a></div>
+		</div>
+	</div>
+	<div class="content-right">
+		<CallToAction href="mailto:a.guenther@alexanderguenther.com">
+			Schreiben Sie mir gerne
+			<Icon icon="paper-plane-tilt" size="1.2em" />
+		</CallToAction>
+	</div>
 </aside>
 
-
 <style>
-
 	aside {
 		display: flex;
 		flex-direction: column;
@@ -25,18 +34,39 @@ import Icon from './Icon.astro';
 		box-shadow: var(--shadow-sm);
 	}
 
+	.content-left, .content-right {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.content-right {
+		align-items: center;
+		justify-content: center;
+	}
+
 	h2 {
 		font-size: var(--text-xl);
 		text-align: center;
 		max-width: 15ch;
 	}
 
-	@media (min-width: 50em) {
+	@media (min-width: 70em) {
 		aside {
-			padding: 7.5rem;
+			padding: 5rem;
 			flex-direction: row;
-			flex-wrap: wrap;
+			flex-wrap: nowrap;
 			justify-content: space-between;
+		}
+
+		.content-left, .content-right {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.content-right {
+			align-items: center;
+			justify-content: center;
 		}
 
 		h2 {

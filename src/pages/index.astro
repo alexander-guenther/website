@@ -45,8 +45,7 @@ const projects = (await getCollection('repertoire'))
 
 				<img
 					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
-					width="480"
-					height="620"
+					width="350"
 					src="assets/AlexanderGuenther_Alleine_DunkelblauerHintergrund_Gebauegt.jpg"
 				/>
 			</header>
@@ -55,7 +54,7 @@ const projects = (await getCollection('repertoire'))
 
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
-				<header class="section-header stack gap-2 lg:gap-4">
+				<header class="section-header stack gap-2 lg:gap-4" style="margin-bottom: -3em;">
 					<h3>Mein aktuelles Repertoire</h3>
 					<p>Hier finden Sie eine Sammlung der Rollen und Stücke der aktuelle Spielzeit.</p>
 				</header>
@@ -79,30 +78,24 @@ const projects = (await getCollection('repertoire'))
 					</CallToAction>
 				</div>
 			</section>
-
-			<section class="section with-background bg-variant">
-				<header class="section-header stack gap-2 lg:gap-4">
+			
+			<section class="section with-background with-cta bg-variant">
+				<header class="section-header stack gap-2 lg:gap-4" style="margin-bottom: -3em;">
 					<h3>Aktuelle Termine</h3>
-					<p>
-						Eine Übersicht meiner anstehenden Termine und Vorstellungen.
-					</p>
+					<p>Eine Übersicht meiner anstehenden Termine und Vorstellungen.</p>
 				</header>
-
-				<div class="gallery">
-					<Grid variant="small">
-						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
-					</Grid>
+				<div class="cta">
+					<CallToAction href="/termine/">
+						Zur Terminübersicht
+						<Icon icon="arrow-right" size="1.2em" />
+					</CallToAction>
 				</div>
 			</section>
+			
 		</main>
-
+		
 		<ContactCTA />
+	</section>
 	</div>
 </BaseLayout>
 
@@ -250,4 +243,5 @@ const projects = (await getCollection('repertoire'))
 			height: 9.5rem;
 		}
 	}
+
 </style>

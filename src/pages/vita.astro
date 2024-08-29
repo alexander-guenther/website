@@ -4,6 +4,7 @@ import CallToAction from '../components/CallToAction.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
+import Pill from '../components/Pill.astro';
 ---
 
 <BaseLayout 
@@ -39,52 +40,60 @@ import Icon from '../components/Icon.astro';
 				/>
 		</header>
 		<main class="wrapper stack gap-20">
-			<setion>
+			<setion class="with-background bg-variant">
 				<div id="kurzVita" style="padding-top: 50px;"></div>
-				
-			<Hero
-				title="Kurz-Vita"
-				tagline="Eine kurzer Überblick über mich und meine Arbeit"
-
-			>
-				
-			</Hero>
-				<h2 class="section-title">Background</h2>
+			<section class="section with-cta">
+				<header class="section-header stack gap-2 lg:gap-4" style="margin-bottom: -3em;">
+					<h2>Kurz-Vita</h2>
+					<p>Eine kurzer Überblick über mich und meine Arbeit.</p>
+				</header>
+			</section>
 				<div class="content">
 					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
+						In Magdeburg wurde ich als Kind einer Opernsängerin und eines Komponisten geboren und wuchs in Lutherstadt Wittenberg auf. Ich erhielt Klavierunterricht und bereits während meiner Schulzeit war ich als Extrachor- Mitglied und Statist am Theater tätig. Von 1986 bis 1992 studierte ich Gesang an der Hochschule für Musik „Franz Liszt“ in Weimar bei Prof. Hans Kremers und erhielt am dortigen Deutschen Nationaltheater auch gleich mein erstes Engagement. Seither bin ich mit diesem Haus eng verbunden und habe dort inzwischen mehr als 100 Partien in Oper, Operette, Musical und Konzert gesungen. Zunächst war ich fast 20 Jahre als Bariton in Partien wie der Figaro in „Il barbiere di Seviglia“ von Rossini, Graf Almaviva in Mozarts „Die Hochzeit des Figaro“, Faninal in Strauss' „Rosenkavalier“, Papageno in „Die Zauberflöte“, Graf Luna in Verdis „Il Trovatore“, Valentin in Gounods „Margarethe“ sowie Tonio in Leoncavallos „Il Pagliacci“ zu sehen und zu hören.
+Aus Puccinis Opern sang ich bereits Marcello in „La Bohéme“, Gianni Schicchi, Ping in „Turandot“ und Scarpia in „Tosca“. Im Weimarer Ring sang ich den Donner im „Rheingold“ und den Gunther in der „Götterdämmerung“. Davon ist bei ARTHAUS MUSIK eine DVD Produktion im Handel erhältlich. Während dieser Zeit nahm ich Unterricht bei Frau Prof. Helga Forner und Frau Anna Reynolds.
 					</p>
 					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
+						2011 entschloss ich mich zu einem Fachwechsel und singe nun im Fach des Charakter- Tenors. Dabei wurde ich von Frau Ks. Renate Behle begleitet. Inzwischen habe ich auch in diesem Fach eine ganze Palette an Partien erarbeitet - so u.a. Agrippa von Nettesheim in Prokofjews „Der feurige Engel“, Max im „Freischütz“, den alten Faust in Gounods „Faust“, Bardolfo in Verdis „Falstaff“, Knusperhexe in „Hänsel und Gretel“, Max in „Jonny spielt auf“ und den Wirt und Valzacchi in „Der Rosenkavallier“ von Richard Strauss. Ich gastierte als Sergej in Schostakowitschs „Lady Macbeth von Mzensk“ am Theater in Bremerhaven, als Schmidt in Massenets „Werther" am Landestheater Altenburg und als Falsacappa in „Die Banditen“ von Jaques Offenbach am Theater Nordhausen und an der Staatsoperette Dresden und als Hexe in Görlitz und Halle.
 					</p>
 					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
+						Im Dezember 2013 ist eine Gesamtaufnahme von Humperdincks „Hänsel und Gretel“ mit der Staatskapelle Weimar mit mir als Hexe bei Dabringhaus und Grimm erschienen.
 					</p>
+					<p>
+						In dieser Spielzeit bin ich u.a. als Herr Schultz in „Cabaret“, als Don Gairre in „Missing in Cantu“, Prof. Higgins in „My fair Lady“ und als Petrosilius Zwackelmann in „Räuber Hotzenplotz zu erleben.
+					</p>
+					<p>
+						Ebenso arbeite ich gerne als Sprecher und Moderator. So moderierte ich unter anderem den Opernball am DNT 2008, die „Spanische Nacht“ der Staatskapelle Weimar im Weimarhallenpark vor ca. 3000 Zuschauern im Jahre 2010 und 2013 die Festveranstaltung „60 Jahre Jugend musiziert“ des Landes Thüringen in der Erfurter Oper. Regelmäßig trete ich als Erzähler mit der Staatskapelle Weimar auf - so bereits dreimal als Pino in den Naftule- Kinderkonzerten von Helmut Eisel, als Sprecher in „Peter und der Wolf“ und „Paddington- Bärs erstes Konzert“.
+					</p>
+					<p>
+						Im März 2005 sang ich die deutsche Erstaufführung von Kurt Weills „The Firebrand of Florence“ mit dem MDR zum Kurt-Weill-Fest in Dessau und war 2007 bei den Aufführungen des Oratoriums „Die Legende von der heiligen Elisabeth“ von Franz Liszt mit der Staatskappelle Weimar unter den Mitwirkenden. Davon ist bei cpo eine CD erschienen. Im September 2013 wirkte ich beim Kunstfest Weimar bei einem Projekt „Milchstrom, Fragebett, Gralsmaschinen - ein Lohengrin-Gelände“ unter der Leitung von Georg Nussbaumer mit.					</p>
+					<p>
+						Für die Interpretation der Titelpartie von Henzes "Der Prinz von Homburg" in der Inszenierung von Erhard Warneke wurde ich von der Zeitschrift "Die Opernwelt" zum Sänger des Jahres nominiert.					</p>
+					<p>
+						Für die Partie des Ottokar in „Der Freischütz“ erhielt ich den Orpheus- Preis der „Oper in der Stiftsruine“ Bad Hersfeld.					</p>
 				</div>
 			</section>
 			
 			<section>
-				<div id="cv" style="padding-top: 50px;"></div>
-			<Hero
-				title="Curriculum Vitae"
-				tagline="Meine vollständige Vita in Tabellenform und als pdf"
-			>
-				
-			</Hero>
-				<h2 class="section-title">Education</h2>
-				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
+				<div id="cv" style="padding-top: 10rem;"></div>
+				<section class="section with-background with-cta">
+					<header class="section-header stack gap-2 lg:gap-4" style="margin-bottom: -3em;">
+						<h3>Curriculum Vitae</h3>
+						<p>Meine Vollständige Vita, auch als Download.</p>
+					</header>
+					<div>
+						<CallToAction href="../public/assets/VitaNov2007.pdf">
+							CV als Download<Icon icon="file-pdf" size="1.2em" />
+						</CallToAction>
+						
+					</div>
+				</section>
+				<div class="container">
+					<iframe class="responsive-iframe" style="border:none;" src="../public/assets/VitaNov2007.pdf" frameborder="0" allowfullscreen loading="lazy"></iframe>
 				</div>
 			</section>
+			
+			
 		</main>
 
 		<ContactCTA />
@@ -119,6 +128,11 @@ import Icon from '../components/Icon.astro';
 
 	.content {
 		grid-column: 2 / 4;
+	}
+
+	.content p {
+		margin-bottom: 1em;
+		margin-top: 2em;
 	}
 
 	.content :global(a) {
@@ -294,6 +308,26 @@ import Icon from '../components/Icon.astro';
 			height: 9.5rem;
 		}
 	}
+
+	.container {
+		margin-top: 2rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 75%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+		border-radius: 1rem;
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
 
 
 </style>
