@@ -12,6 +12,7 @@ const textLinks: { label: string; href: string }[] = [
 	{ label: 'Vita', href: '/vita/' },
 	{ label: 'Termine', href: '/termine' },
 	{ label: 'Fotos', href: '/fotos' },
+	{ label: 'Programme', href: '/programme' },
 
 ];
 ---
@@ -80,14 +81,12 @@ const textLinks: { label: string; href: string }[] = [
 			}
 		</ul>
 		<div class="menu-footer">
-			<div >
+			<div transition:name="contact" >
 				<a href="#contact">
 				<Pill><Icon icon="paper-plane-tilt" size="1.33em" />Kontakt</Pill>
 			</a>
 			</div>
-			<div class="theme-toggle">
-				<ThemeToggle />
-			</div>
+			
 		</div>
 	</div>
 </nav>

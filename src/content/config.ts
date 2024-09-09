@@ -12,15 +12,15 @@ export const collections = {
 		}),
 	}),
 	termine: defineCollection({
-		type: 'content',
+		type: 'data',
 		schema: z.object({
-			datum: z.string().date(),
+			datum: z.coerce.date(),
 			vorstellung: z.string(),
 			rolle: z.string(),
 		}),
 	}),
 	fotos: defineCollection({
-		type: 'content',
+		type: 'data',
 		schema: z.object({
 			publishDate: z.coerce.date(),
 			img: z.string(),

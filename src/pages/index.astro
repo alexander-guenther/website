@@ -15,6 +15,8 @@ import PortfolioPreview from '../components/PortfolioPreview.astro';
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
 import Skills from '../components/Skills.astro';
+import { ImportsNotUsedAsValues } from 'typescript';
+import { Image } from 'astro:assets';
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection('repertoire'))
@@ -32,7 +34,7 @@ const anstehendeTermine = (await getCollection('termine'))
 		heute.setHours(0, 0, 0, 0);
 
 		return terminDatum >= heute;
-	})	.sort((a, b) => b.data.datum.valueOf() - a.data.datum.valueOf())
+	})	.sort((a, b) => a.data.datum.valueOf() - b.data.datum.valueOf())
 	.slice(0, 5);
 
 // Full Astro Component Syntax:
@@ -40,12 +42,11 @@ const anstehendeTermine = (await getCollection('termine'))
 ---
 
 <BaseLayout>
-	<div class="wrapper stack gap-20 lg:gap-48">
-		<div class="stack gap-8 lg:gap-20">
+	<div class="wrapper stack gap-20">
+		<div class="stack gap-20 lg:gap-48" style="height: 90vh;">
 			<header class="hero">
 				<Hero
-					title="Hallo, ich bin Alexander Günther"
-					tagline="Herzlich Willkommen!"
+					title="Alexander Günther - Tenor"
 					align="start"
 				>
 					<div class="roles">
@@ -60,7 +61,7 @@ const anstehendeTermine = (await getCollection('termine'))
 				<img
 					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
 					width="350"
-					src="assets/AlexanderGuenther_Alleine_DunkelblauerHintergrund_Gebauegt.jpg"
+					src="../../src/assets/AlexanderGuenther_Alleine_KeinHintergrund_Gebauegt.webp"
 				/>
 			</header>
 
@@ -70,22 +71,12 @@ const anstehendeTermine = (await getCollection('termine'))
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4" style="margin-bottom: -3em;">
 					<h3>Mein aktuelles Repertoire</h3>
-					<p>Hier finden Sie eine Sammlung der Rollen und Stücke der aktuelle Spielzeit.</p>
+					<p>In dieser Spielzeit  werde ich neu in mein Repertoire den Herodes in Strauss´ „Salomé“ aufnehmen, sowie in einer neuen Inszenierung die Knusperhexe in „Hänsel und Gretel“ singen. Wieder aufgenommen aus der vergangenen Spielzeit werde ich Professor Henry Higgins, den Zauberer Petrosilius Zwackelmann und die Oberschwester Mühlendonk verkörpern.</p>
 				</header>
 
-				<div class="gallery">
-					<Grid variant="offset">
-						{
-							projects.map((project) => (
-								<li>
-									<PortfolioPreview project={project} />
-								</li>
-							))
-						}
-					</Grid>
-				</div>
+				
 
-				<div class="cta">
+				<div class="cta" id="aktuell" >
 					<CallToAction href="/repertoire/">
 						Vollständiges Repertoire
 						<Icon icon="arrow-right" size="1.2em" />
@@ -125,6 +116,22 @@ const anstehendeTermine = (await getCollection('termine'))
 					  </Grid>
 				</div>
 			</section>
+
+			<section class="section with-background with-cta">
+				<header class="section-header stack gap-2 lg:gap-4" style="margin-bottom: -3em;">
+					<h3>Nationaltheater Weimar</h3>
+					<p>Ich befinde mich in Anstellung am Deutschen Nationaltheater und Staatskapelle Weimar.</p>
+				</header>
+
+				
+
+				<div class="cta" id="aktuell" >
+					<CallToAction href="https://www.nationaltheater-weimar.de/de/ueber-uns/ensemble-detail.php?PID=86">
+						Mein Profil am DNT
+						<Icon icon="arrow-right" size="1.2em" />
+					</CallToAction>
+				</div>
+			</section>
 			
 		</main>
 		
@@ -142,16 +149,16 @@ const anstehendeTermine = (await getCollection('termine'))
 	}
 
 	.roles {
-		display: none;
-	}
+			margin-top: 0.5rem;
+			display: flex;
+			gap: 0.5rem;
+		}
 
 	.hero img {
-		aspect-ratio: 5 / 4;
-		object-fit: cover;
-		object-position: top;
+		aspect-ratio: 3 / 4;
+		object-fit: scale-down;
 		border-radius: 1.5rem;
 		box-shadow: var(--shadow-md);
-		border: 5px solid white;
 	}
 
 	@media (min-width: 50em) {

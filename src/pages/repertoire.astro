@@ -7,6 +7,8 @@ import ContactCTA from '../components/ContactCTA.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Hero from '../components/Hero.astro';
 import Grid from '../components/Grid.astro';
+import CallToAction from '../components/CallToAction.astro';
+import Icon from '../components/Icon.astro';
 
 const projects = (await getCollection('repertoire')).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
@@ -24,7 +26,12 @@ const projects = (await getCollection('repertoire')).sort(
 				tagline="Hier finden Sie eine Sammlung der Rollen und Stücke die ich Laufe meiner Karriere spielen durfte."
 				align="start"
 			/>
-
+			<div class="roles">
+				<CallToAction href="/index.html#aktuell">
+					Repertoire aktuelle Spielzeit
+					<Icon icon="arrow-right" size="1.2em" />
+				</CallToAction>
+			</div>
 		</header>
 		
 
@@ -53,7 +60,8 @@ const projects = (await getCollection('repertoire')).sort(
 	}
 
 	.roles {
-		display: none;
+		display: flex;
+		gap: 2rem;
 	}
 
 	.hero img {

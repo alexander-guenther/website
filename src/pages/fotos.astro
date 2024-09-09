@@ -34,10 +34,10 @@ console.log(alleFotos)
 			<Grid variant="small">
 				{
 					alleFotos.map((foto) => (
-						<li>
+						<li><a href={foto.data.img}>
 	<div class="card">		
 	<img src={foto.data.img} alt={foto.data.img_alt || ''} loading="lazy" decoding="async" /></div>	
-						</li>
+</a></li>
 					))
 				}
 			</Grid>
@@ -60,8 +60,7 @@ console.log(alleFotos)
 
 	.hero img {
 		aspect-ratio: 5 / 4;
-		object-fit: cover;
-		object-position: top;
+		object-fit: scale-down;
 		border-radius: 1.5rem;
 		box-shadow: var(--shadow-md);
 		border: 5px solid white;
@@ -84,7 +83,7 @@ console.log(alleFotos)
 		.hero img {
 			aspect-ratio: 3 / 4;
 			border-radius: 4.5rem;
-			object-fit: cover;
+			object-fit: scale-down;
 		}
 	}
 	.with-background {

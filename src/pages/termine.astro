@@ -20,7 +20,7 @@ const alleTermine = (await getCollection('termine'))
 
 		return terminDatum >= heute;
 	})
-	.sort((a, b) => b.data.datum.valueOf() - a.data.datum.valueOf())
+	.sort((a, b) => a.data.datum.valueOf() - b.data.datum.valueOf())
 ---
 
 <BaseLayout
