@@ -61,7 +61,7 @@ const anstehendeTermine = (await getCollection('termine'))
 				<img
 					alt="Alexander Günther lächeldn leicht gebäugt"
 					width="350"
-					src="public/assets/AlexanderGuenther_Alleine_KeinHintergrund_Gebauegt.webp"
+					src="/assets/AlexanderGuenther_Alleine_KeinHintergrund_Gebauegt.webp"
 				/>
 			</header>
 
@@ -163,7 +163,12 @@ const anstehendeTermine = (await getCollection('termine'))
 		box-shadow: var(--shadow-md);
 	}
 
+	section {
+		justify-content: center;
+	}
+
 	@media (min-width: 50em) {
+		
 		.hero {
 			display: grid;
 			grid-template-columns: 6fr 4fr;
@@ -174,6 +179,7 @@ const anstehendeTermine = (await getCollection('termine'))
 		.roles {
 			margin-top: 0.5rem;
 			display: flex;
+			justify-content: start;
 			gap: 0.5rem;
 		}
 

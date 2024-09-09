@@ -111,28 +111,64 @@ img_alt: Iridescent ripples of a bright blue and pink liquid
 |                                 | Der Silbersee                         | Severin                 |         |
 
 <style>
+  /* Allgemeines für die Tabelle */
   table {
-  border-collapse: collapse;
-  border: 1px solid ;
-  letter-spacing: 1px;
-}
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid;
+    letter-spacing: 1px;
+  }
 
-td, th {
-  border: 1px solid ;
-  padding: 10px 20px;
-}
-
-th {
-  background-color: ;
-}
-
-td {
-  text-align: start;
-}
-
-
+  th, td {
+    border: 1px solid;
+    padding: 10px 20px;
+    text-align: start;
+  }
 
   th {
-    text-align: start;
+    background-color: #f0f0f0;
+  }
+
+  /* Tabelle scrollbar machen auf kleineren Bildschirmen */
+  .table-container {
+    width: 100%;
+    overflow-x: auto; /* Fügt horizontale Scrollleiste hinzu */
+  }
+
+  /* Responsive Tabelle */
+  @media screen and (max-width: 768px) {
+    th, td {
+      padding: 8px 12px;
+    }
+  }
+
+  /* Verkleinerung der Schriftgröße für die Tabelle auf kleineren Bildschirmen */
+  @media screen and (max-width: 480px) {
+    th, td {
+      padding: 6px 8px;
+      font-size: 14px;
+    }
+  }
+
+  /* Überschrift */
+  h1 {
+    width: 100%;
+    word-wrap: break-word; /* Lange Wörter umbrechen */
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* Responsive Überschrift */
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 1.8em;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 1.5em;
+    }
   }
 </style>
