@@ -3,7 +3,7 @@ title: Operette / Musical
 publishDate: 2024-09-15 00:00:00
 description: |
   Das Repertoire von Alexander Günther in der Kategorie Operette / Musical
-img: ../../src/assets/stock-2.jpg
+img: /assets/stock-2.jpg
 img_alt: Iridescent ripples of a bright blue and pink liquid
 ---
 # Mein Repertoire in der Kategorie Operette /Musical

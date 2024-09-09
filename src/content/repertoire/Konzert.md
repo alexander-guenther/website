@@ -3,7 +3,7 @@ title: Konzert
 publishDate: 2024-09-14 00:00:00
 description: |
   Das Repertoire von Alexander Günther in der Kategorie Konzert
-img: ../../src/assets/stock-3.jpg
+img: /assets/stock-3.jpg
 img_alt: Iridescent ripples of a bright blue and pink liquid
 ---
 # Mein Repertoire in der Kategorie Konzert

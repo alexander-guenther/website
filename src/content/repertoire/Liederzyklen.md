@@ -3,7 +3,7 @@ title: Liederzyklen
 publishDate: 2024-09-14 00:00:00
 description: |
   Das Repertoire von Alexander Günther in der Kategorie Liederzyklen
-img: ../../src/assets/stock-4.jpg
+img: /assets/stock-4.jpg
 img_alt: Iridescent ripples of a bright blue and pink liquid
 ---
 # Mein Repertoire in der Kategorie Liederzyklen

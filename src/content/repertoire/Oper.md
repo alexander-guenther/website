@@ -3,7 +3,7 @@ title: Oper
 publishDate: 2024-09-16 00:00:00
 description: |
   Das Repertoire von Alexander Günther in der Kategorie Oper
-img: ../../src/assets/stock-1.jpg
+img: /assets/stock-1.jpg
 img_alt: Iridescent ripples of a bright blue and pink liquid
 ---
 # Mein Repertoire in der Kategorie Oper
