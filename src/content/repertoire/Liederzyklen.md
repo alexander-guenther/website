@@ -6,8 +6,6 @@ description: |
 img: /assets/stock-4.jpg
 img_alt: Iridescent ripples of a bright blue and pink liquid
 ---
-# Mein Repertoire in der Kategorie Liederzyklen
-
 
 | Komponist                   | Titel                                      |
 |-----------------------------|-------------------------------------------|
@@ -30,35 +28,3 @@ img_alt: Iridescent ripples of a bright blue and pink liquid
 | Wolf, Hugo                  | Aus dem Schenkenbuch                      |
 |                             | Italienisches Liederbuch                  |
 | Wulf-Woesten, Johannes      | Lieder nach chinesischen Texten           |
-
-
-
-
-
-
-<style>
-  table {
-  border-collapse: collapse;
-  border: 1px solid ;
-  letter-spacing: 1px;
-}
-
-td, th {
-  border: 1px solid ;
-  padding: 10px 20px;
-}
-
-th {
-  background-color: ;
-}
-
-td {
-  text-align: start;
-}
-
-
-
-  th {
-    text-align: start;
-  }
-</style>

@@ -7,7 +7,7 @@ import ContactCTA from '../components/ContactCTA.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Hero from '../components/Hero.astro';
 import Grid from '../components/Grid.astro';
-
+import Icon from '../components/Icon.astro';
 // Content Fetching: List five most recent dates
 const alleFotos = (await getCollection('fotos'))
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
@@ -22,7 +22,6 @@ console.log(alleFotos)
 		<header class="hero" style="margin-bottom: -3em;">
 			<Hero
 				title="Fotos und Bilder"
-				tagline="Stöbern Sie gerne durch meine Bilder- und Fotoauswahl."
 				align="start"
 			/>
 
@@ -34,10 +33,24 @@ console.log(alleFotos)
 			<Grid variant="small">
 				{
 					alleFotos.map((foto) => (
-						<li><a href={foto.data.img}>
-	<div class="card">		
-	<img src={foto.data.img} alt={foto.data.img_alt || ''} loading="lazy" decoding="async" /></div>	
-</a></li>
+						<li>
+							
+								<div class="card">
+									<span class="title"><Icon icon="info" size="1em" /></span>
+									<img src={foto.data.img} alt={foto.data.img_alt || ''} loading="lazy" decoding="async" />
+									
+									<!-- Versteckte Box für Fotograf und Rolle -->
+									<div class="info-box">
+										<p>Stück: {foto.data.vorstellung || 'Unbekannt'}</p>
+										<p>Rolle: {foto.data.rolle || 'Unbekannt'}</p>
+										<p>Fotograf: {foto.data.fotograf || 'Unbekannt'}</p>
+
+										<br>
+										<p><a href={foto.data.img}><Icon icon="fullscreen" size="1.3em" />Bild vergrößern</a></p>
+									</div>
+								</div>	
+							
+						</li>
 					))
 				}
 			</Grid>
@@ -135,9 +148,10 @@ console.log(alleFotos)
 		}
 	}
 	.card {
+		position: relative;
 		display: grid;
 		grid-template: auto 1fr / auto 1fr;
-		aspect-ratio: 4/5;
+		aspect-ratio: 4 / 5;
 		background: var(--gradient-subtle);
 		border: 1px solid var(--gray-800);
 		border-radius: 0.75rem;
@@ -158,10 +172,10 @@ console.log(alleFotos)
 		grid-area: 1 / 1 / 2 / 2;
 		z-index: 1;
 		margin: 0.5rem;
-		padding: 0.5rem 1rem;
+		padding: 0.25rem 0.5rem;
 		background: var(--gray-999);
 		color: var(--gray-200);
-		border-radius: 0.375rem;
+		border-radius: 500px;
 	}
 
 	img {
@@ -169,6 +183,25 @@ console.log(alleFotos)
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+	}
+
+	/* Versteckte Box */
+	.info-box {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(255, 255, 255, 0.9); /* Weiße Box mit leichter Transparenz */
+		color: black;
+		padding: 1rem;
+		border-radius: 0 0 0.75rem 0.75rem;
+		display: none; /* Standardmäßig versteckt */
+		font-size: 0.9rem;
+	}
+
+	/* Box bei Hover anzeigen */
+	.card:hover .info-box {
+		display: block;
 	}
 
 	@media (min-width: 50em) {
@@ -181,6 +214,4 @@ console.log(alleFotos)
 			border-radius: 0.9375rem;
 		}
 	}
-
-
 </style>

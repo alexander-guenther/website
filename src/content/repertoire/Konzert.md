@@ -6,8 +6,6 @@ description: |
 img: /assets/stock-3.jpg
 img_alt: Iridescent ripples of a bright blue and pink liquid
 ---
-# Mein Repertoire in der Kategorie Konzert
-
 
 | Komponist                   | Titel                                   |
 |-----------------------------|----------------------------------------|
@@ -27,35 +25,3 @@ img_alt: Iridescent ripples of a bright blue and pink liquid
 | Orff, Carl                  | Carmina Burana                         |
 | Schubert, Franz             | G-Dur Messe                            |
 | Wulf-Woesten, Johannes      | 1. Sinfonie, Baum der Hoffnung         |
-
-
-
-
-
-
-<style>
-  table {
-  border-collapse: collapse;
-  border: 1px solid ;
-  letter-spacing: 1px;
-}
-
-td, th {
-  border: 1px solid ;
-  padding: 10px 20px;
-}
-
-th {
-  background-color: ;
-}
-
-td {
-  text-align: start;
-}
-
-
-
-  th {
-    text-align: start;
-  }
-</style>

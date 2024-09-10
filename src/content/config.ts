@@ -22,6 +22,9 @@ export const collections = {
 	fotos: defineCollection({
 		type: 'data',
 		schema: z.object({
+			vorstellung: z.string(),
+			rolle: z.string(),
+			fotograf: z.string(),
 			publishDate: z.coerce.date(),
 			img: z.string(),
 			img_alt: z.string().optional(),

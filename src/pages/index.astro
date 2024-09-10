@@ -46,17 +46,15 @@ const anstehendeTermine = (await getCollection('termine'))
 		<div class="stack gap-20 lg:gap-48" style="height: 90vh;">
 			<header class="hero">
 				<Hero
-					title="Alexander Günther - Tenor"
+					title="Alexander Günther"
+					title2='Tenor'
+					tagline='Oper - Operette - Musical - Konzert'
 					align="start"
 				>
-					<div class="roles">
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Oper</Pill>
-						<Pill><Icon icon="mask-happy" size="1.33em" /> Operette</Pill>
-						<Pill><Icon icon="music-notes-simple" size="1.33em" /> Musical</Pill>
-						<Pill><Icon icon="piano-keys" size="1.33em" /> Konzert</Pill>
-
-					</div>
+				<br>
+				<h4>Herzlich Willkommen auf meiner Website!</h4>
 				</Hero>
+				
 
 				<img
 					alt="Alexander Günther lächeldn leicht gebäugt"
@@ -69,7 +67,7 @@ const anstehendeTermine = (await getCollection('termine'))
 
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
-				<header class="section-header stack gap-2 lg:gap-4" style="margin-bottom: -3em;">
+				<header class="section-header stack gap-2 lg:gap-4" >
 					<h3>Mein aktuelles Repertoire</h3>
 					<p>In dieser Spielzeit  werde ich neu in mein Repertoire den Herodes in Strauss´ „Salomé“ aufnehmen, sowie in einer neuen Inszenierung die Knusperhexe in „Hänsel und Gretel“ singen. Wieder aufgenommen aus der vergangenen Spielzeit werde ich Professor Henry Higgins, den Zauberer Petrosilius Zwackelmann und die Oberschwester Mühlendonk verkörpern.</p>
 				</header>
@@ -85,9 +83,8 @@ const anstehendeTermine = (await getCollection('termine'))
 			</section>
 			
 			<section class="section with-background with-cta bg-variant">
-				<header class="section-header stack gap-2 lg:gap-4" style="margin-bottom: -3em;">
+				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Aktuelle Termine</h3>
-					<p>Eine Übersicht meiner anstehenden Termine und Vorstellungen.</p>
 				</header>
 				<div class="cta">
 					<CallToAction href="/termine/">
@@ -118,18 +115,28 @@ const anstehendeTermine = (await getCollection('termine'))
 			</section>
 
 			<section class="section with-background with-cta">
-				<header class="section-header stack gap-2 lg:gap-4" style="margin-bottom: -3em;">
-					<h3>Nationaltheater Weimar</h3>
-					<p>Ich befinde mich in Anstellung am Deutschen Nationaltheater und Staatskapelle Weimar.</p>
+				<header class="section-header stack gap-2 lg:gap-4" >
+										
+					<h3>Deutsches Nationaltheater Weimar</h3>
+					
+					<p>Hier bin ich seit 1992 engagiert.</p>
+					
 				</header>
-
 				
 
 				<div class="cta" id="aktuell" >
+					<div style="display: flex; justify-content: center; padding-bottom: 2rem;">
+						<img
+						alt="Logo Deutsches Nationaltheater Weimar"
+						width="100"
+						src="/assets/dnt-logo.png"
+					/></div>
 					<CallToAction href="https://www.nationaltheater-weimar.de/de/ueber-uns/ensemble-detail.php?PID=86">
 						Mein Profil am DNT
 						<Icon icon="arrow-right" size="1.2em" />
 					</CallToAction>
+					
+					
 				</div>
 			</section>
 			

@@ -6,8 +6,6 @@ description: |
 img: /assets/stock-2.jpg
 img_alt: Iridescent ripples of a bright blue and pink liquid
 ---
-# Mein Repertoire in der Kategorie Operette /Musical
-
 
 | Komponist         | Titel                          | Rolle                    | Sprache    |
 |-------------------|-------------------------------|--------------------------|------------|
@@ -35,32 +33,3 @@ img_alt: Iridescent ripples of a bright blue and pink liquid
 | Weill, Kurt       | Die Dreigroschenoper          | Reitender Bote           |            |
 |                   | The firebrand of Florence     | Duke                     | engl.   |
 
-
-
-
-<style>
-  table {
-  border-collapse: collapse;
-  border: 1px solid ;
-  letter-spacing: 1px;
-}
-
-td, th {
-  border: 1px solid ;
-  padding: 10px 20px;
-}
-
-th {
-  background-color: ;
-}
-
-td {
-  text-align: start;
-}
-
-
-
-  th {
-    text-align: start;
-  }
-</style>
