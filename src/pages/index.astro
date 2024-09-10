@@ -39,7 +39,20 @@ const anstehendeTermine = (await getCollection('termine'))
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
+
+
 ---
+<script>
+		const welcomeMessage = document.getElementById('welcome-message');
+		setTimeout(() => {
+			welcomeMessage.classList.add('show');
+		}, 2000); // 1 Sekunde Verzögerung
+
+		// Begrüßungsnachricht wird nach 5 Sekunden wieder ausgeblendet
+		setTimeout(() => {
+			welcomeMessage.classList.remove('show');
+		}, 7000); // 1 Sekunde Verzögerung + 5 Sekunden sichtbar = 6 Sekunden insgesamt
+</script>
 
 <BaseLayout>
 	<div class="wrapper stack gap-20">
@@ -51,8 +64,7 @@ const anstehendeTermine = (await getCollection('termine'))
 					tagline='Oper - Operette - Musical - Konzert'
 					align="start"
 				>
-				<br>
-				<h4>Herzlich Willkommen auf meiner Website!</h4>
+				
 				</Hero>
 				
 
@@ -61,6 +73,11 @@ const anstehendeTermine = (await getCollection('termine'))
 					width="350"
 					src="/assets/AlexanderGuenther_Alleine_KeinHintergrund_Gebauegt.webp"
 				/>
+
+				<!-- Begrüßungsnachricht -->
+			<div class="welcome-message" id="welcome-message">
+				<p>Herzlich Willkommen auf meiner Website!</p>
+			</div>
 			</header>
 
 		</div>
@@ -301,4 +318,23 @@ const anstehendeTermine = (await getCollection('termine'))
 		}
 	}
 
+	.welcome-message {
+		position: fixed;
+		bottom: 20px;
+		left: 20px;
+		background-color: white;
+		color: black;
+		padding: 10px 20px;
+		border-radius: 10px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.5s, visibility 0.5s;
+		z-index: 100;
+	}
+
+	.welcome-message.show {
+		opacity: 1;
+		visibility: visible;
+	}
 </style>
