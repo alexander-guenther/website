@@ -42,17 +42,6 @@ const anstehendeTermine = (await getCollection('termine'))
 
 
 ---
-<script>
-		const welcomeMessage = document.getElementById('welcome-message');
-		setTimeout(() => {
-			welcomeMessage.classList.add('show');
-		}, 2000); // 1 Sekunde Verzögerung
-
-		// Begrüßungsnachricht wird nach 5 Sekunden wieder ausgeblendet
-		setTimeout(() => {
-			welcomeMessage.classList.remove('show');
-		}, 7000); // 1 Sekunde Verzögerung + 5 Sekunden sichtbar = 6 Sekunden insgesamt
-</script>
 
 <BaseLayout>
 	<div class="wrapper stack gap-20">
@@ -78,6 +67,20 @@ const anstehendeTermine = (await getCollection('termine'))
 			<div class="welcome-message" id="welcome-message">
 				<p>Herzlich Willkommen auf meiner Website!</p>
 			</div>
+			<script>
+				const welcomeMessage = document.getElementById('welcome-message');
+				if (welcomeMessage) {
+					setTimeout(() => {
+					welcomeMessage.classList.add('show');
+				}, 2000); 
+		
+				setTimeout(() => {
+					welcomeMessage.classList.remove('show');
+				}, 7000); 
+				}
+				
+		</script>
+		
 			</header>
 
 		</div>
