@@ -11,7 +11,7 @@ import Hero from '../components/Hero.astro';
 	title="Impressum | Alexander Günther"
 	description="Das Impressum von Alexander Günther"
 >
-	<div class="stack wrapper gap-20">
+	<div class="stack wrapper gap-20 impressum">
 		<header class="hero" style="margin-bottom: -3em;">
 			<Hero
 				title="Impressum"
@@ -53,6 +53,16 @@ import Hero from '../components/Hero.astro';
 		flex-direction: column;
 		align-items: center;
 		gap: 2rem;
+		max-width: 90vw;
+	}
+
+	h1 {
+		max-width: 90vw;
+	}
+
+	.impressum {
+		
+		font-size: var(--text-sm);
 	}
 
 

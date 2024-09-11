@@ -10,7 +10,7 @@ import Icon from './Icon.astro';
 		<div style="margin-top: 2rem;">
 			<div><Icon icon="phone" size="1.2em" /> Telefon: +49 (0) 36 43 / 85 25 63</div>
 		<div><Icon icon="device-mobile" size="1.2em" /> Mobil: +49 (0) 171 / 24 28 052</div>
-		<div><Icon icon="paper-plane-tilt" size="1.2em" /> Email: a.guenther(at)alexanderguenther.com</div>
+		<div><Icon icon="paper-plane-tilt" size="1.2em" /> Email: <a href="mailto:a.guenther@alexanderguenther.com?subject=Anfrage%20Website&body=Hallo%20Alexander,%20">a.guenther(at)alexanderguenther.com</a></div>
 	<div><Icon icon="map-pin" size="1.2em" /> Adresse: <a href="https://maps.app.goo.gl/EtzzCjSz2NeWPKfS6" target="_blank">Rainer-Maria-Rilke-Straße 12, 99425 Weimar</a></div>
 		</div>
 	</div>
@@ -30,7 +30,7 @@ import Icon from './Icon.astro';
 		gap: 3rem;
 		border: 1px solid var(--gray-800);
 		border-radius: 0.75rem;
-		padding: 3rem;
+		padding: 2rem;
 		background-color: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
 	}
@@ -39,6 +39,9 @@ import Icon from './Icon.astro';
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		font-size: var(--text-sm);
+		padding-left: 2rem;
+		padding-right: 2rem;
 	}
 
 	.content-right {
