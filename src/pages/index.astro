@@ -44,8 +44,8 @@ const anstehendeTermine = (await getCollection('termine'))
 ---
 
 <BaseLayout>
-	<div class="wrapper stack gap-15">
-		<div class="stack gap-20 lg:gap-30" style="height: 90vh;">
+	<div class="wrapper stack gap-20">
+		<div class="stack" style="height: 90vh;">
 			<header class="hero">
 				<Hero
 					title="Alexander Günther"
@@ -56,12 +56,22 @@ const anstehendeTermine = (await getCollection('termine'))
 				
 				</Hero>
 				
-
-				<img
-					alt="Alexander Günther lächeldn leicht gebäugt"
-					width="350"
-					src="/assets/AlexanderGuenther_Alleine_KeinHintergrund_Gebauegt.webp"
-				/>
+				<div class="image-container">
+					<img
+						alt="Alexander Günther lächelnd leicht gebäugt"
+						width="350"
+						src="/assets/AlexanderGuenther_Alleine_KeinHintergrund_Gebauegt.webp"
+					/>
+					<!-- Info-Icon in der rechten unteren Ecke -->
+					<span class="info-icon">
+						<Icon icon="info" size="1em" />
+					</span>
+				
+					<!-- Versteckte Box für Fotograf und Rolle -->
+					<div class="info-box">
+						<p>Foto von: Candy Welz</p>
+					</div>
+				</div>
 
 				<!-- Begrüßungsnachricht -->
 			<div class="welcome-message" id="welcome-message">
@@ -89,7 +99,7 @@ const anstehendeTermine = (await getCollection('termine'))
 			<section class=" section with-background with-cta" style="padding-top: 2rem;">
 				<header class="section-header stack gap-2 lg:gap-4" >
 					<h3>Mein aktuelles Repertoire</h3>
-					<p>In dieser Spielzeit  werde ich neu in mein Repertoire den Herodes in Strauss´ „Salomé“ aufnehmen, sowie in einer neuen Inszenierung die Knusperhexe in „Hänsel und Gretel“ singen. Wieder aufgenommen aus der vergangenen Spielzeit werde ich Professor Henry Higgins, den Zauberer Petrosilius Zwackelmann und die Oberschwester Mühlendonk verkörpern.</p>
+					<p>In dieser Spielzeit  werde ich neu in mein Repertoire den Herodes in Strauss´ „Salomé“ aufnehmen, sowie in einer neuen Inszenierung die Knusperhexe in „Hänsel und Gretel“ singen. Wieder aufgenommen aus der vergangenen Spielzeit werde ich Professor Henry Higgins, den Zauberer Petrosilius Zwackelmann und die Oberschwester Mylendonk verkörpern.</p>
 				</header>
 
 				
@@ -106,12 +116,7 @@ const anstehendeTermine = (await getCollection('termine'))
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Aktuelle Termine</h3>
 				</header>
-				<div class="cta">
-					<CallToAction href="/termine/">
-						Alle Termine
-						<Icon icon="arrow-right" size="1.2em" />
-					</CallToAction>
-				</div>
+				
 				<div class="gallery">
 					<Grid variant="small">
 						{
@@ -131,6 +136,12 @@ const anstehendeTermine = (await getCollection('termine'))
 						  })
 						}
 					  </Grid>
+				</div>
+				<div class="cta">
+					<CallToAction href="/termine/">
+						Alle Termine
+						<Icon icon="arrow-right" size="1.2em" />
+					</CallToAction>
 				</div>
 			</section>
 
@@ -340,8 +351,58 @@ const anstehendeTermine = (await getCollection('termine'))
 		z-index: 100;
 	}
 
-	.welcome-message.show {
-		opacity: 1;
-		visibility: visible;
-	}
+	.image-container {
+    position: relative;
+    display: inline-block;
+	width: 20rem;
+	margin-bottom: 5rem;
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1.5rem;
+	
+}
+
+.info-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: white;
+    color: black;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.info-icon:hover {
+    background-color: whitesmoke;
+}
+
+.info-box {
+    position: absolute;
+    bottom: 40px; /* Position slightly above the icon */
+    right: 10px;
+    background-color: white;
+    color: black;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Box anzeigen, wenn das Icon gehovt wird */
+.info-icon:hover + .info-box {
+    opacity: 1;
+    visibility: visible;
+}
+
 </style>

@@ -2,15 +2,16 @@
 title: Oper
 publishDate: 2024-09-16 00:00:00
 description: |
-  Das Repertoire von Alexander Günther in der Kategorie Oper
+  Das Repertoire von Alexander Günther im Genre Oper
 img: /assets/stock-1.jpg
 img_alt: Iridescent ripples of a bright blue and pink liquid
 ---
 
 | Komponist                       | Titel                                 | Rolle                   | Sprache |
 | ------------------------------- | ------------------------------------- | ----------------------- | ------- |
-| Ayres, Richard                  | Die Grille                            | Elefant                 |         |
+| Albrecht, George Alexander  | Die Schneekönigin | Kobold | |
 | Arnecke, Jörg                   | Welcome to Paradise lost              | Mann 2                  |         |
+| Ayres, Richard                  | Die Grille                            | Elefant                 |         |
 | Berg, Alban                     | Wozzek                                | 2. Handwerksbursche     |         |
 |                                 | Lulu                                  | Neger                   |         |
 |                                 |                                       | Prinz                   |         |
