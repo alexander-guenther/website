@@ -225,31 +225,7 @@ const textLinks: { label: string; href: string }[] = [
 		box-shadow: var(--shadow-lg);
 	}
 
-	.socials {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.625rem;
-		font-size: var(--icon-size);
-	}
-
-	.social {
-		display: flex;
-		padding: var(--icon-padding);
-		text-decoration: none;
-		color: var(--accent-dark);
-		transition: color var(--theme-transition);
-	}
-
-	.social:hover,
-	.social:focus {
-		color: var(--accent-text-over);
-	}
-
-	.theme-toggle {
-		display: flex;
-		align-items: center;
-		height: calc(var(--icon-size) + 2 * var(--icon-padding));
-	}
+	
 
 	@media (min-width: 50em) {
 		nav {
@@ -321,18 +297,9 @@ const textLinks: { label: string; href: string }[] = [
 			box-shadow: none;
 		}
 
-		.socials {
-			display: none;
-		}
 	}
 
-	@media (min-width: 60em) {
-		.socials {
-			display: flex;
-			justify-content: flex-end;
-			gap: 0;
-		}
-	}
+	
 	@media (forced-colors: active) {
 		.link.active {
 			color: SelectedItem;
